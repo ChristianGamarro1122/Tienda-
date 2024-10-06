@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda de Zapatos</title>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Zapatos</h1>
+        <div class="cart">
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+    
+    <main>
+        <div class="shoe-list">
+            <div class="shoe-item">
+                <img src="imagenes/zapatillas.jpg" alt="Zapatilla Deportiva">
+                <h2>Zapatilla Deportiva</h2>
+                <p>Precio: $50</p>
+                <button onclick="addToCart('Zapatilla Deportiva', 50)">Añadir al carrito</button>
+            </div>
+            <div class="shoe-item">
+                <img src="imagenes/botines.jpg" alt="Botín Casual">
+                <h2>Botín Casual</h2>
+                <p>Precio: $70</p>
+                <button onclick="addToCart('Botín Casual', 70)">Añadir al carrito</button>
+            </div>
+            <div class="shoe-item">
+                <img src="imagenes/sandalias.jpg" alt="Sandalia de Verano">
+                <h2>Sandalia de Verano</h2>
+                <p>Precio: $30</p>
+                <button onclick="addToCart('Sandalia de Verano', 30)">Añadir al carrito</button>
+            </div>
+        </div>
+    </main>
+    
+    <aside id="cart" class="cart-modal" style="display: none;">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+        <button onclick="toggleCart()">Cerrar</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
